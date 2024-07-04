@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="general.css">
+</head>
+<body>
+    <div class="main">
+        <h2>BMI CALCULATOR</h2>
+        <div class="main-container">
+            <div class="rowOne">
+                <div class="interact-container">
+                    <div class="container1">
+                        <input type="radio" name="unit" id="metric" checked onclick="switchToMetric()">
+                        <label for="metric" class="radio-label">METRIC</label> 
+                        <input type="radio" name="unit" id="imperial" onclick="switchToImperial()"> 
+                        <label for="imperial" class="radio-label">IMPERIAL</label>    
+                    </div>
+                    <div class="container2">
+                        <label for="age-slider">AGE :</label>
+                        <div class="slider">
+                            <input type="range" min="0" max="100" value="20" id="age-slider">
+                            <div class="value">100</div>
+                        </div>
+                    </div>
+                    <div class="container3">
+                        <label for="weight-input">WEIGHT :</label>
+                        <input type="text" placeholder="kg" id="weight-input">
+                        <br>
+                        <label for="height-input">HEIGHT :</label>
+                        <input type="text" placeholder="cm" id="height-input">
+                    </div>
+                    <button onclick="calculateBMI()">CALCULATE</button>
+                </div>
+                <div class="chart-container">
+                    <table>
+                        <tr>
+                            <th>BMI</th>
+                            <th>CATEGORY</th>
+                        </tr>
+                        <tr>
+                            <td>&lt; 16.0</td>
+                            <td>Severe Thinness</td>
+                        </tr>
+                        <tr>
+                            <td>16.0 - 17.0</td>
+                            <td>Moderate Thinness</td>
+                        </tr>
+                        <tr>
+                            <td>17.0 - 18.5</td>
+                            <td>Mild Thinness</td>
+                        </tr>
+                        <tr>
+                            <td>18.5 - 25.0</td>
+                            <td>Normal</td>
+                        </tr>
+                        <tr>
+                            <td>25.0 - 30.0</td>
+                            <td>Overweight</td>
+                        </tr>
+                        <tr>
+                            <td>30.0 - 35.0</td>
+                            <td>Obese Class I</td>
+                        </tr>
+                        <tr>
+                            <td>35.0 - 40.0</td>
+                            <td>Obese Class II</td>
+                        </tr>
+                        <tr>
+                            <td>&gt; 40.0</td>
+                            <td>Obese Class III</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="rowTwo">
+                <div class="meter-container">
+                    <div class="meter">
+                        <div class="outer-circle center">
+                            <div class="inner-circle">
+                                <div class="needle center" id="needle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="output-container">
+                    <div class="op-text">YOUR <br> BMI</div>
+                    <div class="bmi-result" id="bmi-result">-</div>
+                    <div class="bmi-unit" id="bmi-unit">kg/m&#178;</div>
+                    <div class="bmi-text" id="bmi-text">- - - - - -</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

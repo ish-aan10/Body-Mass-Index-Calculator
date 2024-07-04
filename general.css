@@ -1,0 +1,406 @@
+html, body {
+    background-color: rgb(22, 26, 48);
+    padding: 0;
+    margin: 0;
+    font-family: Exo, Arial, Helvetica, sans-serif;
+    color: rgb(240, 236, 229);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.main h2 {
+    margin: 0 auto 30px;
+    background-color: rgb(49, 48, 77);
+    text-align: center;
+    font-size: 36px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    letter-spacing: 2px;
+    box-shadow: 0 1.5px 8px 1px black;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(182, 187, 196);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    margin: auto;
+}
+
+/*--------------------------------
+              ROW-ONE
+----------------------------------*/
+
+.rowOne {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 17.5px;
+}
+
+.interact-container, .chart-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(22, 26, 48);
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 black;
+}
+
+/*---------------------------------
+        INTERACT-CONTAINER
+-----------------------------------*/
+
+.interact-container .container1 {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/*---------------------------------
+            RADIO-LABEL
+-----------------------------------*/
+
+.interact-container .container1 label{
+    letter-spacing: 3px;
+    font-weight: 700;
+    min-width: 140px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(240, 236, 229);
+    border-radius: 50px;
+    padding-top: 2px;
+    transition: linear 200ms;
+    -webkit-transition: linear 200ms;
+    -moz-transition: linear 200ms;
+    -ms-transition: linear 200ms;
+    -o-transition: linear 200ms;
+}
+
+.container1 input {
+    display: none;
+}
+
+.interact-container .container1 input:checked + .radio-label {
+    background-color: rgb(182, 187, 196);
+    color: rgb(22, 26, 48);
+    border-color: rgb(182, 187, 196);
+    box-shadow: 0 0 12px 0 rgb(240, 236, 229);
+}
+
+/*--------------------------------
+            AGE-SLIDER
+----------------------------------*/
+
+.interact-container .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.interact-container .container2 label {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.interact-container .container2 .slider {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.interact-container .container2 .value {
+    font-size: 18px;
+    width: 20px;
+    font-weight: bold;
+    margin-top: -7px;
+    color: rgb(240, 236, 229);
+}
+
+.interact-container .container2 .slider input {
+    width: 230px;
+    height: 7px;
+    outline: none;
+}
+
+/*------------------------------------
+              USER-INPUT
+--------------------------------------*/
+
+.interact-container .container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.interact-container .container3 label {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.interact-container .container3 input {
+    text-align: center;
+    font-family: Exo;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px 15px;
+    width: 250px;
+    border: none;
+    border-radius: 18px;
+    outline: none;
+    background-color: rgb(240, 236, 229);
+    color: rgb(49, 48, 77);
+    margin-bottom: 10px;
+}
+
+.interact-container .container3 input::placeholder {
+    color: rgb(49, 48, 77);
+    text-align: right;
+}
+
+/*----------------------------
+            BUTTON
+------------------------------*/
+
+.interact-container button {
+    font-family: EXO;
+    letter-spacing: 3px;
+    font-size: 24px;
+    font-weight: bolder;
+    width: 70%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(49, 48, 77);
+    color: rgb(240, 236, 229);
+    &:active {
+        scale: 0.97;
+    }
+}
+
+/*--------------------------------
+            CHART-TABLE
+----------------------------------*/
+
+.chart-container {
+    padding: 0;
+    border: 4px solid black;
+}
+
+.chart-container table {
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    min-width: 400px;
+    height: 100%;
+}
+
+.chart-container th, .chart-container td {
+    padding: 12px 15px;
+}
+
+.chart-container th {
+    background-color: rgb(240, 236, 229);
+    color: black;
+    letter-spacing: 3px;
+    font-size: 20px;
+    border-bottom: 4px solid black;
+    &:nth-child(1) {
+        border-top-left-radius: 12px;
+        border-right: 4px solid black;
+    }
+    &:nth-child(2) {
+        border-top-right-radius: 12px;
+    }
+} 
+
+.chart-container td {
+    color: black;
+    font-weight: bold;
+    &:nth-of-type(2) {
+        text-align: left;
+    }
+}
+
+.chart-container tr {
+    &:nth-child(2) {
+        background-color: rgb(255, 247, 0);
+    }
+    &:nth-child(3) {
+        background-color: rgb(250, 240, 101);
+    }
+    &:nth-child(4) {
+        background-color: rgb(198, 240, 100);
+    }
+    &:nth-child(5) {
+        background-color: rgb(87, 243, 95);
+    }
+    &:nth-child(6) {
+        background-color: rgb(252, 214, 48);
+    }
+    &:nth-child(7) {
+        background-color: rgb(255, 188, 43);
+    }
+    &:nth-child(8) {
+        background-color: rgb(255, 105, 35);
+    }
+    &:nth-child(9) {
+        background-color: rgb(190, 38, 0);
+    }
+}
+
+.chart-container tr:nth-child(9) td:nth-of-type(1) {
+    border-bottom-left-radius: 12px;
+}
+
+.chart-container tr:nth-child(9) td:nth-of-type(2) {
+    border-bottom-right-radius: 12px;
+}
+
+/*---------------------------------
+              ROW-TWO
+-----------------------------------*/
+
+.rowTwo {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.meter-container, .output-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(22, 26, 48);
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 black;
+}
+
+/*------------------------------
+        OUTPUT-CONTAINER
+--------------------------------*/
+
+.output-container {
+    min-width: 250px;
+    min-height: 200px;
+}
+
+.output-container .op-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-bottom: 5px;
+}
+
+.output-container .bmi-result {
+    padding: 5px;
+    font-weight: bolder;
+    font-size: 84px;
+}
+
+.output-container .bmi-unit {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.output-container .bmi-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*------------------------
+        BMI-METER
+--------------------------*/
+
+.meter-container {
+    width: 100%;
+}
+
+.meter {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-circle {
+    position: relative;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 50% 50% 0 0;
+    background-image: linear-gradient(to right,
+    rgb(255, 247, 0), rgb(250, 240, 101), rgb(198, 240, 100) 14%,
+    rgb(87, 243, 95) 28%, rgb(252, 214, 48), rgb(255, 188, 43),
+    rgb(255, 105, 35)80%, rgb(190, 38, 0));
+}
+
+.inner-circle {
+    height: 65%;
+    width: 65%;
+    border-radius: 50% 50% 0 0;
+    background-color: rgb(22, 26, 48);
+}
+
+.needle {
+    position: relative;
+    top: calc(50% - 15px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    background-color: rgb(182, 187, 196);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    transform: translate(-50%, -50%) rotate(-100deg);
+}
+
+.needle::before {
+    content: "";
+    position: relative;
+    top: -130%;
+    width: 20px;
+    height: 85px;
+    background-color: rgb(182, 187, 196);
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    border-radius: 0 0 20px 20px;
+}
+
+.needle::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: rgb(182, 187, 196);
+    border-radius: 50%;
+    border: 5px solid rgb(22, 26, 48);
+}
