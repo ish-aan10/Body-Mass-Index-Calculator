@@ -54,7 +54,7 @@ function calculateBMI() {
 }
 
 function displayBMI(bmi) {
-    if (bmi === "NaN") {
+    if (bmi === "NaN"|| bmi === "Infinity") {}
         return;
     }
 
