@@ -1,9 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
-    background-color: rgb(22, 26, 48);
+    background-image: linear-gradient(to left top, rgb(22, 26, 48), rgb(49, 48, 77), rgb(22, 26, 48));
     padding: 0;
     margin: 0;
     font-family: Exo, Arial, Helvetica, sans-serif;
     color: rgb(240, 236, 229);
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .main {
@@ -13,8 +21,9 @@ html, body {
 }
 
 .main h2 {
-    margin: 0 auto 30px;
-    background-color: rgb(49, 48, 77);
+    margin: 0 auto 10px;
+    min-width: 324px;
+    background-color: rgb(22, 26, 48);
     text-align: center;
     font-size: 36px;
     padding: 10px 20px;
@@ -31,7 +40,8 @@ html, body {
     border: none;
     border-radius: 15px;
     padding: 15px;
-    margin: auto;
+    margin: 20px auto;
+    box-shadow: 0 1.5px 8px 1px black;
 }
 
 /*--------------------------------
@@ -53,7 +63,7 @@ html, body {
     border-radius: 15px;
     padding: 25px;
     align-items: center;
-    box-shadow: 0 4px 8px 0 black;
+    box-shadow: 0 1.5px 8px 1px black;
 }
 
 /*---------------------------------
@@ -185,8 +195,8 @@ html, body {
     letter-spacing: 3px;
     font-size: 24px;
     font-weight: bolder;
-    width: 70%;
-    padding: 12px 0;
+    width: 100%;
+    padding: 15px 25px 12px;
     border: none;
     border-radius: 50px;
     background-color: rgb(49, 48, 77);
@@ -233,6 +243,7 @@ html, body {
 } 
 
 .chart-container td {
+    font-size: 18px;
     color: black;
     font-weight: bold;
     &:nth-of-type(2) {
@@ -294,7 +305,7 @@ html, body {
     border-radius: 15px;
     padding: 25px;
     align-items: center;
-    box-shadow: 0 4px 8px 0 black;
+    box-shadow: 0 1.5px 8px 1px black;
 }
 
 /*------------------------------
@@ -403,4 +414,17 @@ html, body {
     background-color: rgb(182, 187, 196);
     border-radius: 50%;
     border: 5px solid rgb(22, 26, 48);
+}
+
+/*------------------------------
+          RESPONSIVE
+--------------------------------*/
+
+@media (max-width: 800px) {
+    .rowOne, .rowTwo {
+        flex-direction: column;
+    }
+    .meter-container {
+        width: 357.273px;
+    }
 }

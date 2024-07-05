@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="general.css">
 </head>
 <body>
@@ -24,8 +26,8 @@
                     <div class="container2">
                         <label for="age-slider">AGE :</label>
                         <div class="slider">
-                            <input type="range" min="0" max="100" value="20" id="age-slider">
-                            <div class="value">100</div>
+                            <input type="range" min="0" max="100" value="50" id="age-slider">
+                            <div class="value"></div>
                         </div>
                     </div>
                     <div class="container3">
@@ -35,7 +37,9 @@
                         <label for="height-input">HEIGHT :</label>
                         <input type="number" placeholder="cm" id="height-input">
                     </div>
-                    <button onclick="calculateBMI()">CALCULATE</button>
+                    <a href="#bmi-output">
+                        <button onclick="calculateBMI()">CALCULATE</button>
+                    </a>
                 </div>
                 <div class="chart-container">
                     <table>
@@ -88,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="output-container">
+                <div class="output-container" id="bmi-output">
                     <div class="op-text">YOUR <br> BMI</div>
                     <div class="bmi-result" id="bmi-result">-</div>
                     <div class="bmi-unit" id="bmi-unit">kg/m&#178;</div>
