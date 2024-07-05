@@ -17,25 +17,26 @@ html, body {
 .main {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
+    padding-top: 20px
 }
 
-.main h2 {
-    margin: 0 auto 10px;
-    min-width: 324px;
+.main .header-title {
+    margin: auto;
     background-color: rgb(22, 26, 48);
     text-align: center;
-    font-size: 36px;
+    font-size: 38px;
+    font-weight: bolder;
     padding: 10px 20px;
     border-radius: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     box-shadow: 0 1.5px 8px 1px black;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 15px;
     background-color: rgb(182, 187, 196);
     border: none;
     border-radius: 15px;
@@ -52,7 +53,6 @@ html, body {
     display: flex;
     flex-direction: row;
     gap: 15px;
-    margin-bottom: 17.5px;
 }
 
 .interact-container, .chart-container {
@@ -391,7 +391,7 @@ html, body {
     width: 30px;
     background-color: rgb(182, 187, 196);
     border-radius: 50%;
-    transition: transform 0.3s ease;
+    transition: transform 0.9s ease;
     transform: translate(-50%, -50%) rotate(-100deg);
 }
 
@@ -422,14 +422,13 @@ html, body {
 
 @media (max-width: 800px) {
     .main-container {
-        margin: 20px 0;
-
-        padding: 15px 0;
+        padding: 6px;
     }
     .rowOne, .rowTwo {
         flex-direction: column;
     }
     .meter-container {
-        width: 357.273px;
+        width: 358px;
+        height: 250px;
     }
 }
