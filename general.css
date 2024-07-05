@@ -423,6 +423,8 @@ html, body {
 @media (max-width: 800px) {
     .main-container {
         margin: 20px 0;
+
+        padding: 15px 0;
     }
     .rowOne, .rowTwo {
         flex-direction: column;
