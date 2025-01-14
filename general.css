@@ -492,11 +492,17 @@ html, body {
     .main-container {
         padding: 6px;
     }
-    .rowOne, .rowTwo {
+    .rowOne, .rowTwo, .rowThree {
         flex-direction: column;
+    }
+    .conContainer1, .conContainer2 {
+        width: 375px;
     }
     .meter-container {
         width: 358px;
         height: 250px;
+    }
+    .output-container {
+        width: 358px;
     }
 }
