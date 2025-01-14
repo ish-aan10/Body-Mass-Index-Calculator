@@ -8,16 +8,47 @@ slider.addEventListener("input", () => {
     value.textContent = slider.value;
 })
 
+const weightInput = document.getElementById("weight-input2");
+const heightInput = document.getElementById("height-input2");
+const weightResult = document.getElementById("weight-result");
+const heightResult = document.getElementById("height-result");
+
+weightInput.addEventListener("input", () => {
+    const isMetric = document.getElementById("metric").checked;
+
+    if(isMetric) {
+        weightResult.innerHTML = (weightInput.value / 2.20462).toFixed(2) + " kg";
+    } else {
+        weightResult.innerHTML = (weightInput.value * 2.20462).toFixed(2) + " lbs";
+    }
+})
+
+heightInput.addEventListener("input", () => {
+    const isMetric = document.getElementById("metric").checked;
+
+    if(isMetric) {
+        heightResult.innerHTML = (heightInput.value / 0.393701).toFixed(2) + " cm";
+    } else {
+        heightResult.innerHTML = (heightInput.value * 0.393701).toFixed(2) + " inches";
+    }
+})  
+
 function switchToMetric() {
     weight = document.getElementById("weight-input");
     height = document.getElementById("height-input");
+    weight2 = document.getElementById("weight-input2");
+    height2 = document.getElementById("height-input2");
     bmiUnit = document.getElementById("bmi-unit");
 
     weight.placeholder = "kg";
+    weight2.placeholder = "lbs";
     weight.value = "";
+    weight2.value = "";
 
     height.placeholder = "cm";
+    height2.placeholder = "inches";
     height.value = "";
+    height2.value = "";
 
     bmiUnit.innerHTML = `kg/m&#178;`;
 }
@@ -25,13 +56,19 @@ function switchToMetric() {
 function switchToImperial() {
     weight = document.getElementById("weight-input");
     height = document.getElementById("height-input");
+    weight2 = document.getElementById("weight-input2");
+    height2 = document.getElementById("height-input2");
     bmiUnit = document.getElementById("bmi-unit");
 
     weight.placeholder = "lbs";
+    weight2.placeholder = "kg";
+    weight2.value = "";
     weight.value = "";
 
     height.placeholder = "inches";
+    height2.placeholder = "cm";
     height.value = "";    
+    height2.value = "";
 
     bmiUnit.innerHTML = `lbs/inches&#178;`;
 }
